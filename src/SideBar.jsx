@@ -15,6 +15,11 @@ export default function SideBar() {
   );
 }
 
-function SideBarIcon({ icon }) {
-  return <div className="sidebar-icon">{icon}</div>;
+function SideBarIcon({ icon, text = "tooltip 💡" }) {
+  return (
+    <div className="sidebar-icon group">
+      {icon}
+      <span className="sidebar-tooltip group-hover:scale-100">{text}</span>
+    </div>
+  );
 }
